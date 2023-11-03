@@ -51,8 +51,8 @@ public class BoardController
 	{
 		List<boardVO>list=bsv.list(pgvo);
 		m.addAttribute("list",list);
-		
-		int totalCount=bsv.totalCount();
+		log.info("pgvo>>>"+pgvo);
+		int totalCount=bsv.totalCount(pgvo);
 		PagingHandler ph= new PagingHandler(pgvo, totalCount);
 		log.info("페이징핸들러:"+ph);
 		m.addAttribute("ph", ph);

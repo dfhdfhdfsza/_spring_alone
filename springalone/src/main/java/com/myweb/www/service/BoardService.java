@@ -19,6 +19,6 @@ public interface BoardService {
 
 	List<boardVO> list(PagingVO pgvo);
 
-	int totalCount();
+	int totalCount(PagingVO pgvo);
 
 }
