@@ -6,14 +6,19 @@
        <pattern>%d %5p [%c] %m%n</pattern>
        </encoder>
     </appender>
-    <logger name="com.myweb.www" level="debug" appender-ref="STDOUT"></logger>
-    <logger name="org.springframework" level="debug" appender-ref="STDOUT"></logger>
-    <logger name="org.springframework.jdbc" level="debug" appender-ref="STDOUT"></logger>
-    <logger name="jdbc.sqlonly" level="debug" appender-ref="STDOUT"></logger>
-    <logger name="jdbc.resultsettable" level="debug" appender-ref="STDOUT"></logger>
-    <!-- more stuff --> 
-    
-    <root level="debug">
-       <appender-ref ref="STDOUT" />
-    </root>
+		
+		<logger name="com.myweb.www" level="debug"
+			appender-ref="STDOUT"></logger>
+		<logger name="org.springframework" level="debug"
+			appender-ref="STDOUT"></logger>
+		<logger name="org.springframework.jdbc" level="debug"
+			appender-ref="STDOUT"></logger>
+		<logger name="jdbc.sqlonly" level="debug" appender-ref="STDOUT"></logger>
+		<logger name="jdbc.resultsettable" level="debug"
+			appender-ref="STDOUT"></logger>
+		<!-- more stuff -->
+
+		<root level="debug">
+			<appender-ref ref="STDOUT" />
+		</root>
 </configuration>

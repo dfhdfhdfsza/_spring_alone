@@ -1,6 +1,7 @@
 package com.myweb.www.config;
 
 import javax.servlet.Filter;
+import javax.servlet.MultipartConfigElement;
 import javax.servlet.ServletRegistration;
 import javax.servlet.ServletRegistration.Dynamic;
 
@@ -37,6 +38,17 @@ public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitiali
 	@Override
 	protected void customizeRegistration(Dynamic registration) {
 		// 그 외 기타 사용자 설정
+		
+		//파일 업로드 설정
+		//경로,maxFileSize,maxReqSize,fileSizeThreshold
+		String uploadLocation="D:\\_myweb\\_java_alone\\fileUpload";
+		int maxFileSize=1024*1024*20; //20mb
+		int maxReqSize=maxFileSize*2;
+		int fileSizeThreshold=maxFileSize;
+		
+		MultipartConfigElement multipartConfig=new MultipartConfigElement(uploadLocation, maxFileSize, maxReqSize, fileSizeThreshold);
+		
+		registration.setMultipartConfig(multipartConfig);
 		
 	}
 	

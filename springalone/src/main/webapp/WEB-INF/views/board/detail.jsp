@@ -53,11 +53,13 @@
 		<button type="button" id="cmtPostBtn">등록</button>
 	</div>
 	<!-- 댓글 표시 라인 -->
-	<table id="tb">
+	<table id="tb" style="text-align: center;">
 		<thead>
 			<tr>
 				<th>cno</th>
 				<th>writer</th>
+				<th>content</th>
+				<th>regAt</th>
 				<th>modAt</th>
 				<th>Mod</th>
 				<th>Del</th>

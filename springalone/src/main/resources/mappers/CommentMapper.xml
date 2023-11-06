@@ -6,7 +6,20 @@
 	<insert id="post">
 		insert into comment (bno,writer,content) values(#{bno},#{writer},#{content})
 	</insert>
-	<select id="list" resultType="com.myweb.www.domain.commentVO">
+	<!-- <select id="list" resultType="com.myweb.www.domain.commentVO">
 		select * from comment where bno=#{bno}
+	</select> -->
+	<delete id="delete">
+		delete from comment where cno=#{cno}
+	</delete>
+	<update id="update">
+		update comment set content=#{content},mod_at=now() where cno=#{cno}
+	</update>
+	<select id="list" resultType="com.myweb.www.domain.commentVO">
+		select * from comment where bno=#{bno} limit #{pgvo.pageStart},#{pgvo.qty}
 	</select>
+	<select id="totalCount" resultType="int">
+		select count(*) from comment where bno=#{bno} 
+	</select>
+	
 </mapper>
