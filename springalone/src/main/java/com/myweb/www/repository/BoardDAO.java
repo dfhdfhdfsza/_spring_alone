@@ -23,4 +23,7 @@ public interface BoardDAO {
 
 	int totalCount(PagingVO pgvo);
 
+	long selectOneBno();
+
+
 }

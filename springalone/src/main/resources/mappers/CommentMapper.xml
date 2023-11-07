@@ -21,5 +21,7 @@
 	<select id="totalCount" resultType="int">
 		select count(*) from comment where bno=#{bno} 
 	</select>
-	
+	<delete id="comAllDel">
+		delete from comment where bno=#{bno}
+	</delete>
 </mapper>

@@ -21,4 +21,6 @@ public interface CommentDAO {
 
 	int totalCount(int bno);
 
+	int comAllDel(int bno);
+
 }

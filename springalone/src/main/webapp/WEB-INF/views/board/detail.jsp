@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,7 @@
 <body>
 	<jsp:include page="../common/header.jsp"></jsp:include>
 	<jsp:include page="../common/nav.jsp"></jsp:include>
+	<c:set value="${bdto.bvo}" var="bvo"/>
 	<table border="1">
 		<tr>
 			<th>bno</th>
@@ -73,6 +75,12 @@
 				class="btn btn-primary" style="visibility: hidden">MORE+</button>
 		</div>
 	</div>
+	<c:forEach items="${bdto.flist}" var="fvo">
+			<li data-uuid="${fvo.uuid}">
+				<img src="/upload/${fn:replace(fvo.saveDir,'\\','/') }/${fvo.uuid}_th_${fvo.fileName}">
+				<span>${fvo.fileSize}Byte</span>
+			</li>
+		</c:forEach>
 
 	<script type="text/javascript">
 		let bnoVal = `<c:out value="${bvo.bno}"/>`;

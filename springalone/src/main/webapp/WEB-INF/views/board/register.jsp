@@ -10,7 +10,7 @@
 <body>
 	<jsp:include page="../common/header.jsp"></jsp:include>
 	<jsp:include page="../common/nav.jsp"></jsp:include>
-	<form action="/board/register" method="post">
+	<form action="/board/register" method="post" enctype="multipart/form-data">
 		Title:<input type="text" name="title"> <br> Content: <input
 			type="text" name="content"> <br> Text: <input
 			type="text" name="writer"> <br>

@@ -28,7 +28,7 @@
 		<button type="submit">Search<span>${ph.totalCount}</span></button> 
 	</form> 
 	
-	<table border="1">
+	<table border="1" style="text-align: center;">
 		<thead>
 			<tr>
 				<th>bno</th>
@@ -36,6 +36,9 @@
 				<th>content</th>
 				<th>writer</th>
 				<th>registerDate</th>
+				<th>readCount</th>
+				<th>cmtCount</th>
+				<th>fileCount</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -46,6 +49,9 @@
 					<td>${bvo.content }</td>
 					<td>${bvo.writer }</td>
 					<td>${bvo.regAt }</td>
+					<td>${bvo.readCount }</td>
+					<td>${bvo.cmtCount }</td>
+					<td>${bvo.fileCount }</td>
 				</tr>
 			</c:forEach>
 		</tbody>

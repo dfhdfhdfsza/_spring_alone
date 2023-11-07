@@ -11,18 +11,13 @@ import lombok.ToString;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class boardVO 
+public class fileVO 
 {
-	private int bno;
-	private String title;
-	private String content;
-	private String writer;
+	private String uuid;
+	private String saveDir;
+	private String fileName;
+	private int fileType;
+	private long bno;
+	private long fileSize;
 	private String regAt;
-	private String modAt;
-	private int cmtQty;
-	private int hasFile;
-	private int readCount;
-	private int cmtCount;
-	private int fileCount;
-
 }
